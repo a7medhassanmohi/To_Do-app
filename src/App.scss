@@ -28,15 +28,19 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    min-height: 100vh;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.521);
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     > .modelcontent {
       width: 40%;
+      @media screen and (max-width: 1004px) {
+        width: 85%;
+      }
       position: relative;
       > form {
         display: flex;
@@ -64,6 +68,9 @@ body {
         cursor: pointer;
         color: white;
         font-size: 26px;
+        @media screen and (max-width: 1004px) {
+          right: 0px;
+        }
       }
     }
   }
@@ -71,6 +78,11 @@ body {
     max-width: 500px;
     width: 500px;
     overflow: hidden;
+    padding: 10px;
+    @media screen and (max-width: 1004px) {
+      max-width: 800px;
+      width: 800px;
+    }
     > .title {
       text-align: center;
       margin-bottom: 25px;
@@ -82,6 +94,12 @@ body {
         display: flex;
         justify-content: center;
         gap: 20px;
+        @media screen and (max-width: 1004px) {
+          font-size: 45px;
+        }
+        @media screen and (max-width: 300px) {
+          font-size: 25px;
+        }
         // color: #ff00cc;
         > span {
           cursor: pointer;
